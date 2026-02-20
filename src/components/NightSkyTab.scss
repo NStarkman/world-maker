@@ -1,0 +1,193 @@
+.night-sky-tab {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 26px 16px 34px;
+  color: #e2e8f0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #f8fafc;
+    font-family: "Lora", Georgia, serif;
+  }
+
+  &__subtitle {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  &__controls {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(240px, 1.2fr);
+    gap: 12px;
+    background: #0f172a;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 14px;
+    padding: 12px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__play-btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: #111827;
+    color: #f8fafc;
+    font-weight: 700;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  &__speed {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    color: #cbd5e1;
+    font-size: 12px;
+  }
+
+  &__speed label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+  }
+
+  &__selectors {
+    display: grid;
+    grid-template-columns: auto auto minmax(160px, 1fr);
+    gap: 8px 12px;
+    align-items: center;
+  }
+
+  &__stepper {
+    display: inline-flex;
+    gap: 6px;
+  }
+
+  &__step-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: #111827;
+    color: #e2e8f0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+  }
+
+  &__step-btn:hover {
+    border-color: rgba(148, 163, 184, 0.7);
+    background: #1f2937;
+    transform: translateY(-1px);
+  }
+
+  &__label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #94a3b8;
+    font-weight: 700;
+  }
+
+  &__select {
+    background: #111827;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    color: #e2e8f0;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 6px 10px;
+    min-width: 160px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: minmax(320px, 2fr) minmax(220px, 1fr);
+    gap: 16px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__frame {
+    border-radius: 16px;
+    background: #0b1020;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    padding: 12px;
+  }
+
+  &__sky {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    background: #0b1020;
+  }
+
+  &__star {
+    animation-name: night-sky-twinkle;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  &__empty {
+    padding: 32px;
+    text-align: center;
+    color: #94a3b8;
+  }
+
+  &__readout {
+    background: #0f172a;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__readout-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #f8fafc;
+  }
+
+  &__readout-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13px;
+    color: #cbd5e1;
+  }
+}
+
+@keyframes night-sky-twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
