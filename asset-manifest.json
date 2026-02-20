@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/world-maker/static/css/main.4d21b531.css",
+    "main.js": "/world-maker/static/js/main.6757a3c6.js",
+    "index.html": "/world-maker/index.html",
+    "main.4d21b531.css.map": "/world-maker/static/css/main.4d21b531.css.map",
+    "main.6757a3c6.js.map": "/world-maker/static/js/main.6757a3c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d21b531.css",
+    "static/js/main.6757a3c6.js"
+  ]
+}
