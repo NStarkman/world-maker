@@ -89,9 +89,20 @@ export function eventForDay(month, day, majorPhase, weeklyPhase, weekday) {
   return "";
 }
 
+// Seeded random number generator for deterministic randomness per year
+function seededRandom(year) {
+  let seed = year;
+  seed = (seed ^ 0xdeadbeef) + (seed << 5);
+  seed = Math.imul(seed ^ (seed >>> 16), 0x21f0aaad);
+  seed = seed ^ (seed >>> 15);
+  seed = Math.imul(seed | 1, 0x735a2d97);
+  seed = (seed ^ (seed >>> 15)) >>> 0;
+  return seed / 0x100000000;
+}
+
 export function generateCalendar(year) {
-  // year % 4 determines which season gets the extra month
-  const extraMonthSeason = year % 4;
+  // Use seeded random to determine which season gets the extra month (0-3)
+  const extraMonthSeason = Math.floor(seededRandom(year) * 4);
   const seasonMap = buildSeasonMap(extraMonthSeason);
   const baseDay = yearBaseDay(year);
   const rows = [];
