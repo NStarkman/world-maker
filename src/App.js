@@ -4,6 +4,7 @@ import "./App.scss";
 
 import AppHeader    from "./components/AppHeader";
 import CalendarTab  from "./components/CalendarTab";
+import TimelineTab  from "./components/TimelineTab";
 import WorldRegionsTab from "./components/WorldRegionsTab";
 import MoonsTab     from "./components/MoonsTab";
 import NightSkyTab  from "./components/NightSkyTab";
@@ -56,6 +57,10 @@ export default function App() {
           seasonMap={seasonMap}
           extraMonthSeason={extraMonthSeason}
         />
+      )}
+
+      {tab === "timeline" && (
+        <TimelineTab year={year} />
       )}
 
       {tab === "world"    && (

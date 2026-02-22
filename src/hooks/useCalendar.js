@@ -2,7 +2,7 @@ import { useState, useMemo, useCallback } from "react";
 import { generateCalendar, groupByMonth } from "../utils/calendarEngine";
 
 export function useCalendar() {
-  const [year, setYearState] = useState(() => Math.floor(Math.random() * 999) + 1);
+  const [year, setYearState] = useState(1108);
   const [yearInput, setYearInput] = useState(() => String(year));
   const [currentMonth, setCurrentMonth] = useState(1);
 

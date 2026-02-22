@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { SETTLEMENTS, KINGDOM_COLORS, MARKER_COLORS } from "../data/worldData";
+import {KINGDOM_COLORS, MARKER_COLORS } from "../data/worldData";
 import "./WorldMapSVG.scss";
 
 export const DEFAULT_WORLD_MAP_SRC = encodeURI(`${process.env.PUBLIC_URL}/World Map.svg`);
@@ -155,19 +155,6 @@ export default function WorldMapSVG({ highlightKingdom = null}) {
                   stroke="#fbbf24" strokeWidth="0.4"
                   strokeDasharray="1 0.8" opacity="0.8"
                 />
-                {SETTLEMENTS.map((s, i) => {
-                  const col = MARKER_COLORS[s.type] || "#555";
-                  const dimmed = highlightKingdom && s.kingdom !== highlightKingdom;
-                  const r = s.type === "Capital" ? 2.2 : s.type === "Port" ? 1.5 : 1.8;
-                  return (
-                    <g key={i} className="world-map-svg__settlement" opacity={dimmed ? 0.2 : 1}>
-                      <circle cx={s.x} cy={s.y} r={r} fill={col} stroke="#fff" strokeWidth="0.5" />
-                      {s.type === "Capital" && (
-                        <circle cx={s.x} cy={s.y} r={r + 1.5} fill="none" stroke={col} strokeWidth="0.5" opacity="0.5" />
-                      )}
-                    </g>
-                  );
-                })}
               </svg>
 
               <div className="world-map-svg__label world-map-svg__label--west">
