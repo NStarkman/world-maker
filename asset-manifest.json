@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/world-maker/static/css/main.4d21b531.css",
-    "main.js": "/world-maker/static/js/main.2d814abf.js",
+    "main.css": "/world-maker/static/css/main.08304470.css",
+    "main.js": "/world-maker/static/js/main.16d53329.js",
     "index.html": "/world-maker/index.html",
-    "main.4d21b531.css.map": "/world-maker/static/css/main.4d21b531.css.map",
-    "main.2d814abf.js.map": "/world-maker/static/js/main.2d814abf.js.map"
+    "main.08304470.css.map": "/world-maker/static/css/main.08304470.css.map",
+    "main.16d53329.js.map": "/world-maker/static/js/main.16d53329.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d21b531.css",
-    "static/js/main.2d814abf.js"
+    "static/css/main.08304470.css",
+    "static/js/main.16d53329.js"
   ]
 }
